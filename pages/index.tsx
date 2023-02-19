@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import Layout from '@/components/layout'
+import Hero from '@/components/hero'
+import Animation from '@/components/animation'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -12,7 +14,12 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <h1 className='text-3xl font-bold underline'>Hello world! asdfasdfa</h1>
+      <section className='flex min-h-screen flex-col items-center justify-center body-font'>
+        <div className='container mx-auto flex px-5 py-24 md:flex-row flex-col items-center'>
+          <Hero />
+          <Animation />
+        </div>
+      </section>
     </Layout>
   )
 }
